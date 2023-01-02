@@ -1,3 +1,566 @@
 JASBkjbciwek:
 
 aksjdiaIDHPASDNIHDIASP2
+Admin@rishav MINGW64 ~/Desktop (master)
+$ mkdir demo
+
+Admin@rishav MINGW64 ~/Desktop (master)
+$ cd demo
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ git init
+Initialized empty Git repository in C:/Users/Admin/Desktop/d
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ vi puru.txt
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ git status
+hint: core.useBuiltinFSMonitor=true is deprecated;please set instead
+hint: Disable this message with "git config advice.useCoreFS
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be commit
+        puru.txt
+
+nothing added to commit but untracked files present (use "gi
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ git commit -m "Comment Message"
+hint: core.useBuiltinFSMonitor=true is deprecated;please set instead
+hint: Disable this message with "git config advice.useCoreFS
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be commit
+        puru.txt
+
+nothing added to commit but untracked files present (use "gi
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ git add puru.txt
+hint: core.useBuiltinFSMonitor=true is deprecated;please set instead
+hint: Disable this message with "git config advice.useCoreFS
+warning: LF will be replaced by CRLF in puru.txt.
+The file will have its original line endings in your working
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ git commit -m "Comment Message"
+hint: core.useBuiltinFSMonitor=true is deprecated;please set instead
+hint: Disable this message with "git config advice.useCoreFS
+[master (root-commit) 34d5a53] Comment Message
+ 1 file changed, 1 insertion(+)
+ create mode 100644 puru.txt
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a ing
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ git push -a
+error: unknown switch `a'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --al
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at
+    --force-if-includes   require remote updates to be integ
+    --recurse-submodules (check|on-demand|no)
+                          control recursive pushing of submo
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=(yes|no|if-asked)]
+                          GPG sign the push
+    --atomic              request atomic transaction on remo
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ git push main master
+fatal: 'main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'origin'
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ git config --global push.autoSetupRemote true
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a ing
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ git remote add puru.txt
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated obj
+                          or do not fetch any tag at all (--
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push
+
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a ing
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ ll
+total 1
+-rw-r--r-- 1 Admin 197121 17 Jan  2 20:30 puru.txt
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ chmod +x puru.txt
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ ll
+total 1
+-rw-r--r-- 1 Admin 197121 17 Jan  2 20:30 puru.txt
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ git status
+hint: core.useBuiltinFSMonitor=true is deprecated;please set instead
+hint: Disable this message with "git config advice.useCoreFS
+On branch master
+nothing to commit, working tree clean
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ git commit -a -m "updated"
+hint: core.useBuiltinFSMonitor=true is deprecated;please set instead
+hint: Disable this message with "git config advice.useCoreFS
+On branch master
+nothing to commit, working tree clean
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ git push --all
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a ing
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ git merge main
+hint: core.useBuiltinFSMonitor=true is deprecated;please set instead
+hint: Disable this message with "git config advice.useCoreFS
+merge: main - not something we can merge
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ ll
+total 1
+-rw-r--r-- 1 Admin 197121 17 Jan  2 20:30 puru.txt
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ git push main master
+fatal: 'main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'origin'
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a ing
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ git push puru.txt
+fatal: invalid gitfile format: puru.txt
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ cd ..
+
+Admin@rishav MINGW64 ~/Desktop (master)
+$ git push demo
+error: src refspec refs/heads/master does not match any
+error: failed to push some refs to 'demo'
+
+Admin@rishav MINGW64 ~/Desktop (master)
+$ cd demo/
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ git push demo
+fatal: 'demo' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Admin@rishav MINGW64 ~/Desktop/demo (master)
+$ git branch -M main
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git remote add origin https://github.com/rk699/demo.git
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 234 bytes | 58.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/rk699/demo.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ vi index.html
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git status
+hint: core.useBuiltinFSMonitor=true is deprecated;please set instead
+hint: Disable this message with "git config advice.useCoreFS
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be commit
+        index.html
+
+nothing added to commit but untracked files present (use "gi
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git commit -a -m "html file updated"
+hint: core.useBuiltinFSMonitor=true is deprecated;please set instead
+hint: Disable this message with "git config advice.useCoreFS
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be commit
+        index.html
+
+nothing added to commit but untracked files present (use "gi
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git status
+hint: core.useBuiltinFSMonitor=true is deprecated;please set instead
+hint: Disable this message with "git config advice.useCoreFS
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be commit
+        index.html
+
+nothing added to commit but untracked files present (use "gi
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ ll
+total 2
+-rw-r--r-- 1 Admin 197121 25 Jan  2 20:42 index.html
+-rw-r--r-- 1 Admin 197121 17 Jan  2 20:30 puru.txt
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git push
+Everything up-to-date
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git remote add origin https://github.com/rk699/demo.git
+error: remote origin already exists.
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git push demo
+fatal: 'demo' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git branch -M main
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git remote add origin https://github.com/rk699/demo.git
+error: remote origin already exists.
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git push -u origin main
+Everything up-to-date
+branch 'main' set up to track 'origin/main'.
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git commit -m "index.html"
+hint: core.useBuiltinFSMonitor=true is deprecated;please set instead
+hint: Disable this message with "git config advice.useCoreFS
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be commit
+        index.html
+
+nothing added to commit but untracked files present (use "gi
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git add .
+hint: core.useBuiltinFSMonitor=true is deprecated;please set instead
+hint: Disable this message with "git config advice.useCoreFS
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git puh demo
+git: 'puh' is not a git command. See 'git --help'.
+
+The most similar command is
+        push
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git push demo
+fatal: 'demo' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git remote add origin https://github.com/rk699/demo.githtt9/demo.git
+error: remote origin already exists.
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git remote add origin https://github.com/rk699/demo.githtt9/demo.git
+error: remote origin already exists.
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git remote add origin https://github.com/rk699/demo.git
+error: remote origin already exists.
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git commit
+hint: core.useBuiltinFSMonitor=true is deprecated;please set instead
+hint: Disable this message with "git config advice.useCoreFS
+Aborting commit due to empty commit message.
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git commit -a -m "updated"
+hint: core.useBuiltinFSMonitor=true is deprecated;please set instead
+hint: Disable this message with "git config advice.useCoreFS
+[main 816c4da] updated
+ 1 file changed, 3 insertions(+)
+ create mode 100644 index.html
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 294 bytes | 73.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/rk699/demo.git
+   34d5a53..816c4da  main -> main
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git branch --list
+* main
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git branch master
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git branch --list
+* main
+  master
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git push main master
+fatal: 'main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git branch --move main master
+fatal: a branch named 'master' already exists
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ mkdir new
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ cd new/
+
+Admin@rishav MINGW64 ~/Desktop/demo/new (main)
+$ git clone https://github.com/rk699/demo.git
+Cloning into 'demo'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 6 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+hint: core.useBuiltinFSMonitor=true is deprecated;please set core.fsmonitor=true instead
+hint: Disable this message with "git config advice.useCoreFSMonitorConfig false"
+
+Admin@rishav MINGW64 ~/Desktop/demo/new (main)
+$ cd ..
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ rmdir ll
+rmdir: failed to remove 'll': No such file or directory
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ ls
+index.html  new/  puru.txt
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git pull
+hint: core.useBuiltinFSMonitor=true is deprecated;please set core.fsmonitor=true instead
+hint: Disable this message with "git config advice.useCoreFSMonitorConfig false"
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 295 bytes | 1024 bytes/s, done.
+From https://github.com/rk699/demo
+   816c4da..18c5cd6  main       -> origin/main
+Updating 816c4da..18c5cd6
+Fast-forward
+ amit.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 amit.txt
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ ll
+total 3
+-rw-r--r-- 1 Admin 197121 16 Jan  2 21:13 amit.txt
+-rw-r--r-- 1 Admin 197121 25 Jan  2 20:42 index.html
+-rw-r--r-- 1 Admin 197121 17 Jan  2 20:30 puru.txt
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ vi amit.txt
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git commit -a -m "updated by puru"
+hint: core.useBuiltinFSMonitor=true is deprecated;please set core.fsmonitor=true instead
+hint: Disable this message with "git config advice.useCoreFSMonitorConfig false"
+[main c56ae76] updated by puru
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 348 bytes | 87.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/rk699/demo.git
+   18c5cd6..c56ae76  main -> main
+
+Admin@rishav MINGW64 ~/Desktop/demo (main)
+$
